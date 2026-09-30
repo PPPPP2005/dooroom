@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>doroom – ระบบจัดการ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="login-view" class="center">
+    <form id="login-form" class="card">
+      <h1>doroom</h1>
+      <p class="muted">เข้าสู่ระบบผู้ดูแลระบบ</p>
+      <input name="email" type="email" placeholder="อีเมล" required />
+      <input name="password" type="password" placeholder="รหัสผ่าน" required />
+      <button type="submit">เข้าสู่ระบบ</button>
+      <p id="login-error" class="error"></p>
+    </form>
+  </section>
+
+  <section id="app-view" hidden>
+    <aside>
+      <h2>doroom</h2>
+      <nav id="nav"></nav>
+      <button id="logout" class="link">ออกจากระบบ</button>
+    </aside>
+    <main>
+      <header><h1 id="page-title"></h1><div id="page-actions"></div></header>
+      <div id="content"></div>
+    </main>
+  </section>
+
+  <dialog id="dialog"><form method="dialog" id="dialog-form"></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>

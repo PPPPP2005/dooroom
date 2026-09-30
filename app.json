@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "DooRoom",
+    "slug": "dooroomapp",
+    "scheme": "doroom",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0B0716",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.doroom.app"
+    },
+    "android": {
+      "package": "com.doroom.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "doroom ใช้กล้องเพื่อสแกน QR Code เช็กชื่อเข้าห้องเรียน",
+          "microphonePermission": false
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+rules_version = '2';
+// All data access goes through the Express API (firebase-admin bypasses these rules).
+// Clients only use Firebase Auth, so deny direct Firestore access from apps.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
